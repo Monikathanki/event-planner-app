@@ -18,15 +18,18 @@ class AddEvent extends React.Component {
     }
     handleAddCal = (event) => {
         event.preventDefault();
+        // elements will have an object with the values
+        // of the inputs
+        console.log(event.target.elements.start_time.value)
         let newEvent = {
-            id: event.target.id.value,
-            discription: event.target.discription.value,
-            location: event.target.location.value,
-            date: event.target.date.value,
-            user_id: event.target.user_id.value,
-            time_start: event.target.time_start.value,
-            time_end: event.target.time_end.value,
-            name: event.target.name.value,
+            // id: event.target.elements.id.value,
+            description: event.target.elements.description.value,
+            location: event.target.elements.location.value,
+            // date: event.target.date.value,
+            // user_id: event.target.user_id.value,
+            time_start: event.target.elements.start_time.value,
+            time_end: event.target.elements.end_time.value,
+            // name: event.target.elements.name.value,
         }
         let currentEvents = this.state.events;
         currentEvents.push(newEvent);
@@ -47,6 +50,7 @@ class AddEvent extends React.Component {
                 <div>
                     <h2>Add a New Event</h2>
                     <form
+                    onSubmit={(e) => this.handleAddCal(e)}
                         className="add-event-form">
                         <label>What time is your event?</label>
                         <p>My event starts at:</p>
@@ -57,8 +61,9 @@ class AddEvent extends React.Component {
                         <input type="text" name="location" />
                         <label>Add a description:</label>
                         <input type="text" name="description" />
+                        <input type="submit" value="Add to calendar."  />
                     </form>
-                    <button type="submit" onClick={this.handleAddCal}>Add to Calendar</button>
+                    
                 </div>
                 <div>
                     <button onClick={this.handleCancel}>Cancel</button>
