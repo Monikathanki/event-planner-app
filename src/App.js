@@ -9,7 +9,6 @@ import Register from "./Components/Register/Register";
 import Header from "./Components/Header/Header";
 import Features from "./Components/Features/Features";
 import Footer from "./Components/Footer/Footer";
-import ProfilePic from "./Components/ProfilePic/ProfilePic";
 import EventsList from "./Components/EventsList/EventsList";
 import TeamEventsList from "./Components/TeamEventsList/TeamEventsList";
 import Event from "./Components/Event/Event";
@@ -21,7 +20,6 @@ import AddEvent from "./Components/AddEvent/AddEvent";
 import TokenService from "./Services/TokenService";
 import config from  "./Config/Config"
 import AddTeam from "./Components/AddTeam/AddTeam"
-import ProfileContactInfo from "./Components/ProfileContactinfo/ProfileContactInfo"
 import TeamMember from "./Components/TeamMember/TeamMember";
 
 export default class App extends React.Component {
@@ -118,6 +116,14 @@ export default class App extends React.Component {
     fetch(`${config.REACT_APP_API_BASE_URL}/events`)
     .then((res) => res.json())
     .then((events) => this.setState({events}));
+
+    fetch(`${config.REACT_APP_API_BASE_URL}/teams`)
+    .then((res) => res.json())
+    .then((teams) => this.setState({teams}));
+
+    fetch(`${config.REACT_APP_API_BASE_URL}/team-members/teamMembersData/user_id`)
+    .then((res) => res.json())
+    .then((teamMembers) => this.setState({teamMembers}));
   }
 
   render() {
@@ -142,24 +148,9 @@ export default class App extends React.Component {
 
         <Route exact path="/register" component={Register} />
         <main>
-          <section className="main-dashboard">
+          {/* <section className="main-dashboard">
             <Route exact path="/dashboard" component={ProfilePic} />
-             <Route
-              exact
-              path="/dashboard"
-              render={(props) => (
-                <ProfileContactInfo
-                   {...props}
-                  {...this.state}
-                   setUserEvents={this.setUserEvents}
-                   setTeamMemberEvents={this.setTeamMemberEvents}
-                    setUser={this.setUser}
-                  setUserTeams={this.setUserTeams}
-                  setUserTeamMembers={this.setUserTeamMembers}
-               />
-             )}
-            /> 
-          </section>
+          </section> */}
           <section className="main-events">
             <Route
               exact

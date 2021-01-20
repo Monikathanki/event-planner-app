@@ -31,10 +31,11 @@ export default class Event extends React.Component {
   };
 
   render() {
+    let event = this.props.events
     return(
       <section className="event-view">
         <div className="event-view-selected">
-          {this.props.events && this.props.events.map((event, i) => 
+          {event && event.map((event, i) => 
               <React.Fragment key={i}>
                 <h2 key={i}>{event.title}</h2>
                 <h3>{event.location}</h3>

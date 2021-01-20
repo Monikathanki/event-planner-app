@@ -2,6 +2,7 @@ import React from "react";
 import DummyStore from "../../DummyStore/DummyStore";
 import { Link } from "react-router-dom";
 import Modal from "../Modal/Modal";
+import config from "../../Config/Config"
 
 export default class TeamList extends React.Component {
   state = {
@@ -19,7 +20,14 @@ export default class TeamList extends React.Component {
       show: false,
     });
   };
+  componentDidMount() {
+    fetch(`${config.REACT_APP_API_BASE_URL}/team-members`)
+    .then((res) => res.json())
+    .then((teamMembers) => this.setState({teamMembers}));
+
+  }
   render() {
+    console.log(this.props.teamMembers)
     const teamMembers = this.props.teamMembers.teamMemberData;
     //console.log(this.props.teamMembers);
 

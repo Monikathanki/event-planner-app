@@ -70,12 +70,14 @@ export default class AddTeam extends React.Component {
     render() {
         return(
             <>
-            <div >
-                <h2>Create New Team</h2>
+            <div className="tm-form" >
+            <h2>Create New Team</h2>
                 <form
+                   className = "team-form"
                    onSubmit={this.handleAddTeam}
                 >
-                    <label>Title: </label>
+                    
+                    <label className="title">Title: </label>
                     <input type="text" name="title" require/>
                     <button type="submit">Create a Team</button>
                 </form>

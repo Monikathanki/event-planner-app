@@ -1,26 +1,23 @@
 import React from "react";
-//import DummyStore from "../../DummyStore/DummyStore";
-import FullCalendar from "@fullcalendar/react";
-import dayGridPlugin from "@fullcalendar/daygrid";
+// import FullCalendar from "@fullcalendar/react";
+// import dayGridPlugin from "@fullcalendar/daygrid";
 
-class CalendarView extends React.Component {
-
-
-    render() {
-        // https://dev.to/lberge17/fullcalendar-with-react-3hnl
-        return (
-            <FullCalendar
-                events={[
-                    { title: this.props.events[0] && this.props.events.name, date: this.props.events[0] && this.props.events.date },
-                    { title: this.props.events[1] && this.props.events.name, date: this.props.events[1] && this.props.events.date },
-                    { title: this.props.events[2] && this.props.events.name, date: this.props.events[2] && this.props.events.date },
-                    
-                ]}
-                plugins={[dayGridPlugin]}
-                initialView="dayGridMonth"
-            />
-        );
-    }
+export default class CalendarView extends React.Component {
+  render() {
+    const allEvents = this.props.events;
+    const getDates = allEvents.map((e) => new Date(e.date));
+    console.log(allEvents);
+    return (
+      <div>
+        <h2>Events Calendar</h2>
+        <ul>
+          {allEvents.map((e, i) => (
+            <li key={i}>{`${e.title} Date: ${new Date(
+              e.date
+            ).toLocaleDateString()}`}</li>
+          ))}
+        </ul>
+      </div>
+    );
+  }
 }
-
-export default CalendarView;
