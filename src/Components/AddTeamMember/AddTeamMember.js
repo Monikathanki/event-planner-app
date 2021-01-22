@@ -25,7 +25,9 @@ export default class AddTeamMember extends React.Component {
         if(!res.ok) throw new Error('error')
         return res.json()
      })
-     .then(member => console.log(member))
+     .then(member => {
+       this.props.updateTeamMember(member) 
+     })
      this.props.history.push("/teams");
   }
   render() {

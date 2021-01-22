@@ -20,15 +20,10 @@ export default class TeamList extends React.Component {
       show: false,
     });
   };
-  componentDidMount() {
-    fetch(`${config.REACT_APP_API_BASE_URL}/team-members`)
-    .then((res) => res.json())
-    .then((teamMembers) => this.setState({teamMembers}));
 
-  }
   render() {
     console.log(this.props.teamMembers)
-    const teamMembers = this.props.teamMembers.teamMemberData;
+    const teamMembers = this.props.teamMembers;
     //console.log(this.props.teamMembers);
 
     // const teamMember = this.props.match.params.id

@@ -2,7 +2,8 @@ import React from "react";
 
 export default class TeamMember extends React.Component {
   render() {
-    const team = this.props.teamMembers.teamMemberData;
+    const team = this.props.teamMembers;
+    console.log(team)
     return (
       <section className="team-view">
         <div className="team-member-selected">
