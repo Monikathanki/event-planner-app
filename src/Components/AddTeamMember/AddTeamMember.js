@@ -36,10 +36,11 @@ export default class AddTeamMember extends React.Component {
     return(
 
       <>
-        <div>
+        <div className="add-team-view">
             <h2>Add Team member</h2>
               <form
                   onSubmit={this.handleAddTeamMember}
+                  className="add-team-form"
               >
                 <label htmlFor='teams'>Select Team</label>
                   <select id="teams" name="teams">
@@ -57,11 +58,11 @@ export default class AddTeamMember extends React.Component {
                 <label>Last Name:</label>
                 <input type="text" name="last_name" require="true"/>
                 <br />
-                {/* <label>Type in your photo URL</label>
-                <input type="url" name="profile_image" />
-                <br /> */}
+                <label>Email</label>
+                <input type="text" name="email" require="true"/>
+                <br />
                 <label htmlFor="phone">Phone Number</label>
-                <input type="tel" name="phone_number" />
+                 <input type="tel" name="phone_number" />
                 <br />
                 <button type="submit">Add Team Members</button>
               </form>

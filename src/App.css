@@ -347,6 +347,7 @@
   
   .modal-main h2 {
     margin-top: 25px;
+    color: black
   }
   
   .display-block {
@@ -457,8 +458,17 @@
   }
   
   /* Add Team*/
-  .add-team {
-    margin: 0 auto;
+  .add-team-view {
+    margin: 5%;
+    padding: 10%;
+    width: 80vh;
+    flex: 1 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border: solid grey 2px;
+    border-radius: 4px;
   }
   
   .add-team-form {
@@ -524,7 +534,7 @@
     .team-view,
     .team-desktop {
       display: none;
-    }
+    } 
   
     .main-team {
       display: block;
@@ -536,16 +546,12 @@
     border: solid grey 2px;
     width: 95%;
     margin-top: 20px;
+    margin-bottom: 20px;
     background: #e0e0e0;
+    height: 40vh;
   }
   
-  .member-photo {
-    width: 300px;
-    height: 300px;
-    margin: 20px;
-    object-fit: cover;
-    border: grey solid 2px;
-  }
+
   
   /* CalendarView */
   

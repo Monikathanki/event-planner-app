@@ -70,7 +70,7 @@ export default class AddTeam extends React.Component {
     render() {
         return(
             <>
-            <div className="tm-form" >
+            <div className="add-team-view" >
             <h2>Create New Team</h2>
                 <form
                    className = "team-form"

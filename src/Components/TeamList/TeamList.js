@@ -2,7 +2,6 @@ import React from "react";
 import DummyStore from "../../DummyStore/DummyStore";
 import { Link } from "react-router-dom";
 import Modal from "../Modal/Modal";
-import config from "../../Config/Config"
 
 export default class TeamList extends React.Component {
   state = {
@@ -20,19 +19,15 @@ export default class TeamList extends React.Component {
       show: false,
     });
   };
-
   render() {
-    console.log(this.props.teamMembers)
     const teamMembers = this.props.teamMembers;
     //console.log(this.props.teamMembers);
 
-    // const teamMember = this.props.match.params.id
-    //   ? DummyStore.team.find((t) => t.id === Number(this.props.match.params.id))
-    //   : "";
+   const teamMember = this.props.match.params.id ? this.props.teams.find((team) => team.id === Number(this.props.match.params.id)) : "";
     return (
       <aside className="team-sidebar">
         <ul>
-          {teamMembers && teamMembers.map((team, i) => (
+          {teamMembers.map((team, i) => (
             <li key={i}>
               <div className="team-desktop">
                 <Link to={`/teams/team-member/${team.id}`}>
@@ -41,7 +36,7 @@ export default class TeamList extends React.Component {
               </div>
               <div className="view-modal">
                 <Modal
-                  teamMember={this.props.match.params.id ? this.props.teams.find((team) => team.id === Number(this.props.match.params.id)): ""}
+                  teamMember={teamMember}
                   {...this.props}
                   show={this.state.show}
                   handleClose={this.hideModal}

@@ -3,18 +3,9 @@ import { Link } from "react-router-dom";
 import config from "../../Config/Config";
 import TokenService from "../../Services/TokenService";
 
-//import DummyStore from "../../DummyStore/DummyStore";
 
 export default class Event extends React.Component {
-  //  handleInvites = () => {
-  //    alert(
-  //      `Email invites were sent to ${this.props.match.id 
-  //       ? this.props.team.find((
-  //         (team) => team.id === Number(this.props.match.params.id)
-  //       )) : ""
-  //       && this.props.team.first_name} and ${this.props.team && this.props.team.first_name}!`
-  //   );
-  //  };
+ 
 
   handleDelete = () => {
     fetch(`${config.REACT_APP_API_BASE_URL}/events/${this.props.match.params.id}`, {

@@ -2,18 +2,17 @@ import React from "react";
 
 export default class TeamMember extends React.Component {
   render() {
-    const team = this.props.teamMembers;
-    console.log(team)
+    const teams = this.props.teamMembers;
+    //console.log(team)
     return (
       <section className="team-view">
         <div className="team-member-selected">
-          {team && team.map((t, i) =>
-            t.id === Number(this.props.match.params.id) ? (
+          {teams.map((team, i) =>
+            team.id === Number(this.props.match.params.id) ? (
               <>
-                <img className="member-photo" alt="" src={t.profile_image} />
-                <h2 key={i}>{`${t.first_name} ${t.last_name}`}</h2>
-                <h3>Email: {t.email}</h3>
-                <h3>Phone Number: {t.phone_number}</h3>
+                <h2 key={i}>{`${team.first_name} ${team.last_name}`}</h2>
+                <h3>Email: {team.email}</h3>
+                <h3>Phone Number: {team.phone_number}</h3>
               </>
             ) : (
               ""

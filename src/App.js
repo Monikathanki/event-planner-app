@@ -3,11 +3,9 @@ import { Route } from "react-router-dom";
 import "./App.css";
 
 import Nav from "./Components/Nav/Nav";
-import About from "./Components/About/About";
 import Login from "./Components/Login/Login";
 import Register from "./Components/Register/Register";
 import Header from "./Components/Header/Header";
-import Features from "./Components/Features/Features";
 import Footer from "./Components/Footer/Footer";
 import EventsList from "./Components/EventsList/EventsList";
 import TeamEventsList from "./Components/TeamEventsList/TeamEventsList";
@@ -151,7 +149,6 @@ export default class App extends React.Component {
         />
 
         <Route exact path="/" component={Header} />
-        <Route exact path="/about" component={About} />
         <Route
           exact
           path="/login"
@@ -243,8 +240,6 @@ export default class App extends React.Component {
               render={(props) => <CalendarView {...props} {...this.state} />}
             />
           </section>
-
-          <Route exact path="/" component={Features} />
           <Route path="/" component={Footer} />
         </main>
       </div>

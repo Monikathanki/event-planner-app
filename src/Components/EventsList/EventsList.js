@@ -22,14 +22,6 @@ export default class EventsList extends React.Component {
 
 
   render() {
-    //const teamId = this.props.teams[0];
-    //const eventsList = this.props.events;
-    //const myEvents = eventsList.filter((e) => e.team_id === teamId);
-    // const event = this.props.match.params.id
-    //   ? this.props.events.find(
-    //       (e) => e.id === Number(this.props.match.params.id)
-    //     )
-    //   : "";
 
     return (
       <aside
