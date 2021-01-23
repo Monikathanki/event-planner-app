@@ -37,8 +37,8 @@ export default class Register extends React.Component {
       <div className="register-section">
         <form onSubmit={(e) => this.handleSubmit(e)} className="register-form">
           {this.state.error && <p className="error">{this.state.error}</p>}
-          <label>Type in your photo URL</label>
-          <input type="url" name="profile_image" />
+          {/* <label>Type in your photo URL</label>
+          <input type="url" name="profile_image" /> */}
           <label>First Name (required)</label>
           <input type="text" name="first_name" required />
           <label>Last Name (required)</label>

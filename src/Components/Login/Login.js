@@ -28,7 +28,7 @@ export default class Login extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <h1>Login to Your Account</h1>
+        <h1 className="account">Login to Your Account</h1>
         <div className="login-form">
           <form className="login-form" onSubmit={this.handleLogin}>
             {this.state.error && <p className="error">{this.state.error}</p>}
@@ -37,18 +37,16 @@ export default class Login extends React.Component {
               <input
                 type="text"
                 name="email"
-                defaultValue="demo_user1@demo.com"
               />
 
               <label className="password-label">Password</label>
               <input
                 type="password"
                 name="password"
-                defaultValue="Password#3"
               />
             </div>
             <div>
-              <button type="submit">Sign in</button>
+              <button id="sign-in"type="submit">Sign in</button>
             </div>
           </form>
         </div>

@@ -11,7 +11,6 @@ export default class TeamMember extends React.Component {
             team.id === Number(this.props.match.params.id) ? (
               <>
                 <h2 key={i}>{`${team.first_name} ${team.last_name}`}</h2>
-                <h3>Email: {team.email}</h3>
                 <h3>Phone Number: {team.phone_number}</h3>
               </>
             ) : (

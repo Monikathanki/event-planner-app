@@ -52,14 +52,11 @@ export default class AddTeamMember extends React.Component {
                     }
                   </select>
                   <br />
-                <label>First Name: </label>
+                <label>First Name: (required)</label>
                 <input type="text" name="first_name" require="true"/>
                 <br />
-                <label>Last Name:</label>
+                <label>Last Name: (required)</label>
                 <input type="text" name="last_name" require="true"/>
-                <br />
-                <label>Email</label>
-                <input type="text" name="email" require="true"/>
                 <br />
                 <label htmlFor="phone">Phone Number</label>
                  <input type="tel" name="phone_number" />

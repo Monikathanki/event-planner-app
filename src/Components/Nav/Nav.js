@@ -17,17 +17,16 @@ export default class Nav extends React.Component {
             <div className="nav-home">
               <div className="nav-logo">
                 <h1>
-                  <Link to="/">Event Planner</Link>
+                  <Link id = "link"to="/">Event Planner</Link>
                 </h1>
               </div>
               <div className="nav-links">
-                <Link to="/">Home</Link>
-                <Link to="/about">About</Link>
+                <Link id= "link" to="/">Home</Link>
                 <Link to="/login">
-                  <button>Login</button>
+                  <button id="button">Login</button>
                 </Link>
                 <Link to="/register">
-                  <button>Register</button>
+                  <button id="button">Register</button>
                 </Link>
               </div>
             </div>
@@ -68,7 +67,7 @@ export default class Nav extends React.Component {
 
               <li>
                 <h2>
-                  <button onClick={(e) => this.handleLogout(e)}>Log Out</button>
+                  <button id = "button" onClick={(e) => this.handleLogout(e)}>Log Out</button>
                 </h2>
               </li>
             </ul>

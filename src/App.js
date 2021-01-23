@@ -19,6 +19,7 @@ import TokenService from "./Services/TokenService";
 import config from  "./Config/Config"
 import AddTeam from "./Components/AddTeam/AddTeam"
 import TeamMember from "./Components/TeamMember/TeamMember";
+import Dashboard from "./Components/Dashboard/Dashboard";
 
 export default class App extends React.Component {
   state = {
@@ -124,7 +125,6 @@ export default class App extends React.Component {
   };
 
   componentDidMount() {
-    const { user_id } = TokenService.readJwtToken()
     fetch(`${config.REACT_APP_API_BASE_URL}/events`)
     .then((res) => res.json())
     .then((events) => this.setState({events}));
@@ -133,9 +133,14 @@ export default class App extends React.Component {
     .then((res) => res.json())
     .then((teams) => this.setState({teams}));
 
-    fetch(`${config.REACT_APP_API_BASE_URL}/team-members/${user_id}`)
-    .then((res) => res.json())
-    .then((teamMembers) => this.setState({teamMembers}));
+    if (TokenService.hasAuthToken()) {
+      const { user_id } = TokenService.readJwtToken()
+      fetch(`${config.REACT_APP_API_BASE_URL}/team-members/${user_id}`)
+      .then((res) => res.json())
+      .then((teamMembers) => this.setState({teamMembers}));
+    }
+    
+  
   }
 
   render() {
@@ -159,9 +164,9 @@ export default class App extends React.Component {
 
         <Route exact path="/register" component={Register} />
         <main>
-          {/* <section className="main-dashboard">
-            <Route exact path="/dashboard" component={ProfilePic} />
-          </section> */}
+           <section className="main-dashboard">
+            <Route exact path="/dashboard" component={Dashboard} />
+          </section>
           <section className="main-events">
             <Route
               exact

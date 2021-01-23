@@ -4,9 +4,9 @@ export default class Dashboard extends React.Component {
     render() {
         return (
             <section className="main-dashboard">
-                <div className="profile-details">
-                    <h3>Name</h3>
-                    <h3>Contact Info</h3>
+                <div className="hero1">
+                    <h2>Event Planning Made Easy</h2>
+                    <p>Use event planner to make your event planning easy.</p>
                 </div>
             </section>
         );

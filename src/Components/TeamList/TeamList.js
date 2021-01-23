@@ -1,7 +1,6 @@
 import React from "react";
 import DummyStore from "../../DummyStore/DummyStore";
 import { Link } from "react-router-dom";
-import Modal from "../Modal/Modal";
 
 export default class TeamList extends React.Component {
   state = {
@@ -31,19 +30,13 @@ export default class TeamList extends React.Component {
             <li key={i}>
               <div className="team-desktop">
                 <Link to={`/teams/team-member/${team.id}`}>
-                  <h3>{`${team.first_name} ${team.last_name}`}</h3>
+                  <h3 id="sidebar">{`${team.first_name} ${team.last_name}`}</h3>
                 </Link>
               </div>
               <div className="view-modal">
-                <Modal
-                  teamMember={teamMember}
-                  {...this.props}
-                  show={this.state.show}
-                  handleClose={this.hideModal}
-                />
                 <button onClick={this.showModal} className="view-modal-button">
                   <Link to={`/teams/team-member/${team.id}`}>
-                    <h2>{`${team.first_name} ${team.last_name}`}</h2>
+                    <h2 id="team-link">{`${team.first_name} ${team.last_name}`}</h2>
                   </Link>
                 </button>
               </div>

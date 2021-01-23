@@ -9,15 +9,12 @@ class Header extends React.Component{
                     <h2>Event Planning Made Easy</h2>
                     <p>Use event planner to make your event planning easy.</p>
                     <div>
-                        <button>
-                            <Link to="/login">
+                        <button id="h-button">
+                        <Link to="/login">
                                 Start planning your event now
                         </Link>
                         </button>
                     </div>
-                </div>
-                <div className="hero">
-                    <span className="hero-image">Image</span>
                 </div>
                 
             </header>

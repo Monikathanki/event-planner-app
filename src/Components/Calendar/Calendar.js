@@ -8,7 +8,7 @@ export default class CalendarView extends React.Component {
     const getDates = allEvents.map((e) => new Date(e.date));
     console.log(allEvents);
     return (
-      <div>
+      <div className="hero1">
         <h2>Events Calendar</h2>
         <ul>
           {allEvents.map((e, i) => (

@@ -33,8 +33,9 @@
   /* Nav Bar - Public Route / Landing Page */
   
   .nav-home {
-    border: grey solid 2px;
-    background-color: grey;
+    border: #000066 solid 2px;
+    background-color: #000066;
+    color: white;
     padding: 15px;
     font-size: 30px;
     width: 100%;
@@ -46,15 +47,25 @@
   nav h1 {
     font-size: 35px;
   }
+  #link {
+    color: white;
+  }
+
+  #link:hover{
+    color: #000066;
+    background-color: white;
+  }
   
   .nav-links a {
     margin: 10px;
     font-size: 25px;
+    color: white;
   }
   
   nav h1,
   nav a {
     text-decoration: none;
+    color: white;
   }
   
   nav a:hover {
@@ -62,7 +73,26 @@
   }
   
   nav a:visited {
-    color: black;
+    color: gray;
+  }
+
+  #button{
+    color: white;
+    background-color: #000066;
+    border: solid white 2px;
+    border-radius: 0.5rem;
+    box-shadow:#000066;
+    padding: 2px;
+    font-size: 20px;
+
+  }
+
+
+
+  #button:hover{
+    color:blue;
+    background-color: white;
+    font-weight: bold;
   }
   
   /* Dashboard Nav / Logged In */
@@ -75,7 +105,7 @@
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #111;
+    background-color: #000066;
     overflow-x: hidden;
     padding-top: 20px;
   }
@@ -84,7 +114,7 @@
     padding: 6px 8px 6px 16px;
     text-decoration: none;
     font-size: 25px;
-    color: #818181;
+    color: white;
     display: block;
   }
   
@@ -93,10 +123,11 @@
     padding: 0;
     text-align: left;
     padding-left: 5px;
+    color: white;
   }
   
   .dashboard-menu a:visited {
-    color: #818181;
+    color: #c4bdbd;
   }
   
   @media screen and (min-width: 900px) {
@@ -118,6 +149,7 @@
       flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
+      color: white;
     }
   
     
@@ -127,48 +159,123 @@
     }
   }
   
-  /* About page */
-  
-  .about-ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
   /* Header / Landing Page */
   
   header {
-    display: flex;
+    margin-left: 5%;
+    flex-direction: column;
     justify-content: center;
-    margin: 100px auto;
     flex-direction: row;
     max-width: 1200px;
   }
   
   .hero {
-    border: 2px solid grey;
+    border: 2px solid #707070;
+    box-shadow: #707070;
+    border-radius: 1rem;
     margin: 15px 2.5%;
     padding: 150px;
     flex-basis: 45%;
     box-sizing: border-box;
-    background-color: #e5e5e5;
+    background-color: #707070;
+  } 
+
+  .hero1 {
+    border: 2px solid #707070;
+    box-shadow: #707070;
+    border-radius: 4px;
+    margin-left: 22%;
+    margin-right: 10%;
+    padding: 150px;
+    flex-basis: 45%;
+    box-sizing: border-box;
+    background-color: #707070;
+  }
+  .hero1 h2 {
+    color: white;
+    justify-content: space-between;
+  }
+
+  .hero1 p {
+    color: white;
+  }
+
+  .hero1 li {
+    color: white;
+  }
+
+  .hero h2 {
+    color: white;
+    justify-content: space-between;
+
+  }
+
+  .hero a {
+    text-decoration: none;
+    color: white;
+    margin-top: 2%;
+  }
+
+  .hero a:hover{
+    color: black;
+  }
+
+  .hero p {
+    color: white;
+    margin: 1%;
+  }
+
+  #h-button {
+    background-color: #707070;
+    border: white 2px solid;
+    box-shadow: white;
+    border-radius: 1rem;
+    padding: 2%;
+  } 
+
+  #sign-in {
+    color: white;
+    background-color: #707070;
+    border: solid white 2px;
+    box-shadow:#707070;
+    padding: 3px;
+    margin: 1px;
+  }
+  #sign-in:hover{
+    color:#707070;
+    font-weight: bolder;
+    border: #707070 2px solid;
+    background-color: white;
+
+  }
+
+  .create-account a {
+    color: #404040;
+    font-weight: bolder;
+    margin-top: 2px;
+    text-decoration: none;
+  }
+  .create-account a:hover{
+    color:black;
+    font-weight: bolder;
+  }
+
+  .account{
+    color: #404040;
+    margin-bottom: 1px;
+  }
+
+  .email-label{
+    color: #404040;
+    font-weight: bolder;
+  }
+  .password-label{
+    color: #404040;
+    font-weight: bolder;
   }
   
-  /* Features / Landing Page */
   
-  .features {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    background-color: #e5e5e5;
-    padding: 250px;
-  }
   
-  .feature-1,
-  .feature-2,
-  .feature-3 {
-    border: grey 2px solid;
-    padding: 85px;
-  }
   
   @media screen and (min-width: 320px) and (max-width: 768px) {
     header {
@@ -180,32 +287,17 @@
       padding: 80px;
     }
   
-    .features {
-      padding: 150px;
-    }
   }
   
-  /* WhyBookly / Landing Page*/
+
   
-  .why-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 300px;
-  }
-  
-  @media screen and (min-width: 320px) and (max-width: 768px) {
-    .why-section {
-      padding: 150px;
-    }
-  }
   
   /* Footer */
   
   .footer {
-    border: grey 2px solid;
-    background-color: grey;
-    color: #3d405b;
+    border: #000066 2px solid;
+    background-color: #000066;
+    color: white;
     height: 25px;
     position: fixed;
     bottom: 0;
@@ -237,7 +329,9 @@
     display: flex;
     flex-direction: column;
     width: 15%;
-    border: grey 2px solid;
+    border: #707070 2px solid;
+    box-shadow: #707070;
+    border-radius: 1rem;
     padding: 10px;
   }
   
@@ -249,58 +343,14 @@
     }
   }
   
-  /* Main Dashboard */
-  
-  /* ProfilePic */
-  
-  .profile-pic {
-    margin-top: 60px;
-  }
-  
-  img {
-    width: 350px;
-    border-radius: 50%;
-    border: grey solid 2px;
-  }
-  
-  @media screen and (min-width: 320px) and (max-width: 768px) {
-    img {
-      width: 250px;
-    }
-  }
-  
-  .profile-details {
-    margin-top: 25;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .profile-details h3 {
-    width: 50%;
-  }
-  
-  /* Edit Profile Form */
-  
-  .edit-profile-view {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .edit-profile-form {
-    display: flex;
-    flex-direction: column;
-    width: 30%;
-    border: grey 2px solid;
-    padding: 10px;
-  }
   
   /* Events Main */
   
   .main-events {
     display: flex;
     margin-left: 13%;
+    color: #404040;
+    font-weight: bold;
   }
   
   .tm-events {
@@ -311,6 +361,7 @@
   
   .event-sidebar {
     flex: 1;
+    color:#404040;
   }
   
   .event-sidebar ul {
@@ -319,37 +370,13 @@
   }
   
   .event-sidebar h3 {
-    border: solid grey 2px;
+    border: solid #707070 2px;
+    color: #404040;
     padding: 20px;
     margin: 15px;
   }
   
-  /* Modal */
-  
-  .modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(6, 5, 5, 0.056);
-  }
-  
-  .modal-main {
-    position: fixed;
-    background: #f8f8f8;
-    width: 80%;
-    height: 75%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  
-  .modal-main h2 {
-    margin-top: 25px;
-    color: black
-  }
-  
+ 
   .display-block {
     display: block;
   }
@@ -358,21 +385,8 @@
     display: none;
   }
   
-  .view-modal-button {
-    padding: 7px;
-    margin: 5px;
-    background: none;
-    border: none;
-    font-size: 20px;
-  }
-  
-  .modal-photo {
-    margin: 20px;
-    object-fit: cover;
-    border: grey solid 2px;
-    width: 200px;
-    height: 200px;
-  }
+
+
   
   @media screen and (min-width: 769px) {
     .view-modal {
@@ -386,19 +400,29 @@
     flex: 3;
     display: flex;
     justify-content: center;
+    color: white;
   }
   
   .event-view-selected {
-    border: solid grey 2px;
+    border: solid #707070 2px;
+    border-radius: 1rem;
     width: 95%;
     margin-top: 20px;
-    background: #e0e0e0;
+    background:#707070;
     height: 100%;
   }
   
   .event-team-list ul {
     list-style-type: none;
+    color: white;
     padding: 0;
+  }
+
+  button {
+    color: white;
+    background-color: #707070;
+    border: solid white 2px;
+    box-shadow:#707070;
   }
   
   /* Events Mobile View */
@@ -410,24 +434,19 @@
     }
   }
   
-  /* @media screen and (max-width: 768px) {
-    .events-desktop {
-      display: none;
-    }
-    .event-view {
-      display: none;
-    }
-  } */
-  
   /* Add Event View */
   
   .add-event-view {
     flex: 3 1;
     display: flex;
+    margin-left: 5%;
+    margin-right: 5%;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    border: solid grey 2px;
+    color: #404040;
+    border: solid #707070 2px;
+    border-radius: 1rem;
   }
   
   .add-event-form {
@@ -459,16 +478,19 @@
   
   /* Add Team*/
   .add-team-view {
-    margin: 5%;
-    padding: 10%;
-    width: 80vh;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-radius: 1rem;
+    padding: 2%;
     flex: 1 1;
     display: flex;
+    color: #404040;
+    font-weight: bold;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    border: solid grey 2px;
-    border-radius: 4px;
+    border: solid #707070 2px;
+    border-radius: 1rem;
   }
   
   .add-team-form {
@@ -483,7 +505,7 @@
   }
   
   .team-sidebar h3 {
-    border: solid grey 2px;
+    border: solid #707070 2px;
     padding: 20px;
     margin: 15px;
   }
@@ -492,6 +514,27 @@
     list-style-type: none;
     padding: 0;
   }
+
+  .team-sidebar li {
+    list-style-type: none;
+    
+  }
+
+  #team-link {
+    color: white;
+    list-style-type: none;
+    text-decoration: none;
+  } 
+
+  
+
+
+
+  #sidebar{
+    color: #404040;
+    background-color: none;
+    text-decoration: none;
+  } 
   
   /* Team Member */
   
@@ -512,26 +555,10 @@
     flex-direction: column;
   }
   
-  /* Invite Landing Page*/
-  
-  .invite-page {
-    margin: 0 auto;
-  }
-  
-  .invite-login-register {
-    border: grey 2px solid;
-    padding: 30px;
-  }
-  
-  .unregistered-user-form {
-    display: flex;
-    flex-direction: column;
-  }
-  
+ 
   /* Team View Mobile */
   
   @media screen and (max-width: 768px) {
-    .team-view,
     .team-desktop {
       display: none;
     } 
@@ -539,24 +566,19 @@
     .main-team {
       display: block;
       margin: 0 auto;
+      color: white;
     }
   }
   
   .team-member-selected {
-    border: solid grey 2px;
+    border: solid #707070 2px;
     width: 95%;
     margin-top: 20px;
     margin-bottom: 20px;
-    background: #e0e0e0;
+    background: #707070; 
+    border-radius: 1rem;
+    color: white;
     height: 40vh;
   }
   
 
-  
-  /* CalendarView */
-  
-  /* .main-calendar {
-    width: 70%;
-    margin: 0 auto;
-    height: 50%;
-  } */

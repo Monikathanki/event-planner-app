@@ -20,9 +20,9 @@ export default class AddTeam extends React.Component {
                 })
            })
            .then((res) => {
-                if (!res.ok) {
-                  throw new Error(res.status);
-                }
+                 if (!res.ok) {
+                   throw new Error(res.status);
+               }
                 return res.json();
               })
               .then((newTeam) => {
